@@ -1,19 +1,29 @@
 import React from "react";
 
-const TodoForm = ({ setInput }) => {
+const TodoForm = ({ input, setInput, todos, setTodos }) => {
   const handleInput = e => {
     setInput(e.target.value);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setTodos([
+      ...todos,
+      { text: input, completed: false, id: Math.random() * 1000 }
+    ]);
+    setInput("");
   };
 
   return (
     <form className="todo-form">
       <input
+        value={input}
         onChange={handleInput}
         type="text"
         placeholder="Add a todo"
         className="todo-input"
       />
-      <button className="add-button" type="submit">
+      <button onClick={handleSubmit} className="add-button" type="submit">
         Add Todo
       </button>
     </form>
