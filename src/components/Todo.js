@@ -1,11 +1,15 @@
 import React from "react";
 
-const Todo = ({ text }) => {
+const Todo = ({ todo, todos, setTodos }) => {
+  const handleDelete = () => {
+    setTodos(todos.filter(item => item.id !== todo.id));
+  };
+
   return (
     <div>
-      <li>{text}</li>
+      <li>{todo.text}</li>
       <button>Complete</button>
-      <button>Delete</button>
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };
