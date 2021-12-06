@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosCheckbox, IoIosTrash } from "react-icons/io";
 
 const Todo = ({ todo, todos, setTodos }) => {
   const handleDelete = () => {
@@ -20,10 +21,16 @@ const Todo = ({ todo, todos, setTodos }) => {
   };
 
   return (
-    <div>
-      <li className={`${todo.completed ? "completed" : ""}`}>{todo.text}</li>
-      <button onClick={handleComplete}>Complete</button>
-      <button onClick={handleDelete}>Delete</button>
+    <div className="todo-container">
+      <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
+        {todo.text}
+      </li>
+      <button className="button" onClick={handleComplete}>
+        <IoIosCheckbox />
+      </button>
+      <button className="button" onClick={handleDelete}>
+        <IoIosTrash />
+      </button>
     </div>
   );
 };

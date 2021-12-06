@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosAddCircle } from "react-icons/io";
 
 const TodoForm = ({ input, setInput, todos, setTodos }) => {
   const handleInput = e => {
@@ -26,7 +27,7 @@ const TodoForm = ({ input, setInput, todos, setTodos }) => {
         className="todo-input"
       />
       <button onClick={handleSubmit} className="add-button" type="submit">
-        Add Todo
+        <IoIosAddCircle />
       </button>
     </form>
   );
