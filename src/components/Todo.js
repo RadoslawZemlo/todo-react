@@ -25,10 +25,10 @@ const Todo = ({ todo, todos, setTodos }) => {
       <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
         {todo.text}
       </li>
-      <button className="button" onClick={handleComplete}>
+      <button className="button check-btn" onClick={handleComplete}>
         <IoIosCheckbox />
       </button>
-      <button className="button" onClick={handleDelete}>
+      <button className="button trash-btn" onClick={handleDelete}>
         <IoIosTrash />
       </button>
     </div>
