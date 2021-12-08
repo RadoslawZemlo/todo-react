@@ -32,22 +32,22 @@ function App() {
   }, [todos]);
 
   useEffect(() => {
+    const handleSelection = () => {
+      switch (select) {
+        case "completed":
+          setSelectedTodos(todos.filter(todo => todo.completed === true));
+          break;
+        case "uncompleted":
+          setSelectedTodos(todos.filter(todo => todo.completed === false));
+          break;
+        default:
+          setSelectedTodos(todos);
+          break;
+      }
+    };
+
     handleSelection();
   }, [todos, select]);
-
-  const handleSelection = () => {
-    switch (select) {
-      case "completed":
-        setSelectedTodos(todos.filter(todo => todo.completed === true));
-        break;
-      case "uncompleted":
-        setSelectedTodos(todos.filter(todo => todo.completed === false));
-        break;
-      default:
-        setSelectedTodos(todos);
-        break;
-    }
-  };
 
   return (
     <div className="todo-app">
