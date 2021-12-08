@@ -1,7 +1,7 @@
 import React from "react";
 import { IoIosAddCircle } from "react-icons/io";
 
-const TodoForm = ({ input, setInput, todos, setTodos }) => {
+const TodoForm = ({ input, setInput, todos, setTodos, setSelect }) => {
   const handleInput = e => {
     setInput(e.target.value);
   };
@@ -17,6 +17,11 @@ const TodoForm = ({ input, setInput, todos, setTodos }) => {
     setInput("");
   };
 
+  const handleSelect = e => {
+    console.log(e.target.value);
+    setSelect(e.target.value);
+  };
+
   return (
     <form className="todo-form">
       <input
@@ -29,6 +34,13 @@ const TodoForm = ({ input, setInput, todos, setTodos }) => {
       <button onClick={handleSubmit} className="add-button" type="submit">
         <IoIosAddCircle />
       </button>
+      <div className="select">
+        <select onChange={handleSelect} name="todos" className="filter-todos">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      </div>
     </form>
   );
 };

@@ -8,6 +8,9 @@ function App() {
 
   const [todos, setTodos] = useState([]);
 
+  const [select, setSelect] = useState("all");
+  const [selectedTodos, setSelectedTodos] = useState([]);
+
   // Save todos to local storage
   useEffect(() => {
     getTodos();
@@ -28,6 +31,24 @@ function App() {
     saveTodos();
   }, [todos]);
 
+  useEffect(() => {
+    handleSelection();
+  }, [todos, select]);
+
+  const handleSelection = () => {
+    switch (select) {
+      case "completed":
+        setSelectedTodos(todos.filter(todo => todo.completed === true));
+        break;
+      case "uncompleted":
+        setSelectedTodos(todos.filter(todo => todo.completed === false));
+        break;
+      default:
+        setSelectedTodos(todos);
+        break;
+    }
+  };
+
   return (
     <div className="todo-app">
       <header>
@@ -38,8 +59,13 @@ function App() {
         setInput={setInput}
         todos={todos}
         setTodos={setTodos}
+        setSelect={setSelect}
       />
-      <TodoList todos={todos} setTodos={setTodos} />
+      <TodoList
+        todos={todos}
+        setTodos={setTodos}
+        selectedTodos={selectedTodos}
+      />
     </div>
   );
 }
