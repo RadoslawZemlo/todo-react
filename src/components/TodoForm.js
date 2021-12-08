@@ -35,7 +35,7 @@ const TodoForm = ({ input, setInput, todos, setTodos, setSelect }) => {
         <IoIosAddCircle />
       </button>
       <div className="select">
-        <select onChange={handleSelect} name="todos" className="filter-todos">
+        <select onChange={handleSelect} name="todos" className="select-todos">
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="uncompleted">Uncompleted</option>
