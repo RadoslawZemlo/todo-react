@@ -2,13 +2,22 @@
 
 Todo App is a simple react todo app.
 
-## Description
+## Table of Contents
+
+1. [General Info](#general-info)
+   1.1 [Screenshots](#screenshots)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+
+## General Info
 
 Todo App is a simple todo app built with react. This project is utilizing functional components as well as react hooks.
 
 The purpose of building this project was to acquire and consolidate knowledge concerning React framework.
 
-![Todo App Image](public/img/todo-app.png)
+### Screenshots
+
+<img width="600" alt="todo-app" src="https://user-images.githubusercontent.com/95445412/151232171-e4dcbc9f-7b3b-408a-86e3-27f7c3897dcf.png">
 
 ## Technologies
 
@@ -22,7 +31,7 @@ The purpose of building this project was to acquire and consolidate knowledge co
 - Select completed, uncompleted or all todos
 - Save and retrieve todos from local storage
 
-## Setup
+## Installation
 
 In order to get a copy of this project and run it locally, first of all, make sure you already have node and npm installed in your system.
 
