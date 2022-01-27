@@ -18,7 +18,6 @@ const TodoForm = ({ input, setInput, todos, setTodos, setSelect }) => {
   };
 
   const handleSelect = e => {
-    console.log(e.target.value);
     setSelect(e.target.value);
   };
 

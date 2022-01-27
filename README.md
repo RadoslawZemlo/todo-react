@@ -1,13 +1,14 @@
 # Todo App
 
-Todo App is a simple react todo app.
+Todo App is a simple react todo app
 
 ## Table of Contents
 
-1. [General Info](#general-info)
-   1.1 [Screenshots](#screenshots)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
+- [General Info](#general-info)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Installation](#installation)
 
 ## General Info
 
