@@ -16,6 +16,9 @@ Todo App is a simple todo app built with react. This project is utilizing functi
 
 The purpose of building this project was to acquire and consolidate knowledge concerning React framework.
 
+Check the demo deployed to github pages:
+https://radoslawzemlo.github.io/todo-react/
+
 ### Screenshots
 
 <img width="600" alt="todo-app" src="https://user-images.githubusercontent.com/95445412/151232171-e4dcbc9f-7b3b-408a-86e3-27f7c3897dcf.png">
